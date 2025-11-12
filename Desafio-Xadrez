@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+//int Rainha                       /// 8 casas para esquerda
+int Torre = 1;                      /// 5 casas para frente
+int Bispo = 1;                   /// 5 casas diagonais
+int Linha = 1, Coluna = 1;
+
+for (int Rainha = 1; Rainha < 9; Rainha++){
+    printf("Rainha, Esquerda, casa %d\n", Rainha);
+}
+
+while (Torre < 6)
+{
+    printf("Torre, Frente, casa %d\n", Torre);
+    Torre++;
+}
+do {
+    printf("Bispo, Diagonal, casa (%d,%d)\n", Linha, Coluna);
+    Linha++, Coluna++, Bispo++;
+} while (Bispo < 6);
+
+return 0;
+}
